@@ -1,9 +1,14 @@
-import './app.css';
+import React, { Component } from 'react';
+import Nav from './components/nav'
 
-function App() {
-  return (
-    <h1>gg</h1>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+      <Nav />
+      </>
+    );
+  }
 }
 
 export default App;
