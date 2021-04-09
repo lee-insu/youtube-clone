@@ -1,10 +1,12 @@
-import React, { useState,useEffect } from 'react';
-import VideoList from './components/videolist';
+import React, { useEffect, useState } from 'react';
+import VideoList from './components/videolist.jsx';
 
 
 function App() {
-  const [videos, setVideos] = useState([]);
+  const [videos,setVideos] = useState([]);
+
   useEffect(()=> {
+   
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -14,8 +16,11 @@ function App() {
       .then(response => response.json())
       .then(result => setVideos(result.items))
       .catch(error => console.log('error', error));
-  },[]);
-  return <VideoList videos={videos} />
-} 
+
+  })
+  return <VideoList videos ={videos}/>;
+
+
+}
 
 export default App;

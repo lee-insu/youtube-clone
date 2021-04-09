@@ -1,10 +1,12 @@
 import React from 'react';
-import VideoItem from '../components/videoitem';
+import VideoItem from './videoitem.jsx';
 
-const VideoList = (props) => (
-    <ul>
-        {props.videos.map(video => <VideoItem key={video.id} video={video}/> )}
-    </ul>          
-);
+const VideoList = props => (
+            <ul>
+                {props.videos.map(video => (
+                <VideoItem key={video.id} video ={video} />
+                ))}
+            </ul>
+    );
 
-export default VideoList
+export default VideoList;
