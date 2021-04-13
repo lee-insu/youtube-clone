@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import VideoList from './components/videolist.jsx';
+import VideoList from './components/list/videolist.jsx';
 
 
 function App() {
@@ -18,8 +18,7 @@ function App() {
       .catch(error => console.log('error', error));
 
   })
-  return <VideoList videos ={videos}/>;
-
+  return <VideoList videos = {videos}/>;
 
 }
 
